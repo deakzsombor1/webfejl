@@ -20,3 +20,18 @@ table, td, th {
     border-collapse: collapse;
 }
 
+html {
+    background-color: rgba(100, 0, 0, 10%);
+}
+
+p {
+    text-align: justify;
+}
+
+h1 {
+    font-variant: small-caps;
+    font-size: 4rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-shadow: 2px 1px black;
+}
