@@ -97,9 +97,13 @@ a:first-of-type {
 }
 
 #div14 {
+    width: calc(80%-18px) !important ;
     border: 10px solid blue;
+    box-sizing: content-box;
 }
 
 #div15 {
+    width: calc(80%+42px) !important ;
     border: 10px solid purple;
+    box-sizing: border-box;
 }
