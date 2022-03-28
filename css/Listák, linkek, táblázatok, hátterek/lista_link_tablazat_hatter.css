@@ -53,7 +53,10 @@ h1 {
     3. Lista szimbólum: kör.
 */
 ul {
-
+    margin-left: 0px;
+    padding-left: 0px;
+    list-style-position: inside;
+    list-style-type: circle;
 }
 
 /*
@@ -63,21 +66,24 @@ ul {
     3. lista típusa: kis görög betűk
 */
 ol {
-
+    margin: 0px;
+    padding: 0px;
+    list-style-position: outside;
+    list-style-type: lower-greek;
 }
 
 /*
     Égtájak lista: típusa nagy római számjegyek.
 */
 ul#egtajak {
-
+    list-style-type: upper-roman;
 }
 
 /*
     A lista elemek között fél sor margó legyen!
 */
 li {
-
+    margin-bottom: 0.5em;
 }
 
 /*
@@ -104,7 +110,25 @@ a {
         - A doboz kapjon 1px vastag szegélyt (border vs outline).
 */
 
+a:link {
+    color: red;
+}
 
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: yellow;
+    text-decoration: underline dashed 2px;
+    background-color: rgba(0, 0, 255, 0.5);
+    /* border: 10px dotted hotpink; */
+    outline: 1px solid black;
+}
+
+a:active {
+    color: orange;
+}
 
 /*
     Táblázat:
@@ -115,6 +139,10 @@ a {
 table {
     border: 1px solid black;
     background-color: yellowgreen;
+    margin: auto;
+    border-spacing: 5px;
+    /* border-collapse: collapse; */
+    border-collapse: separate;
 }
 
 /*
@@ -125,6 +153,9 @@ table {
 td, th {
     border: 1px solid black;
     background-color: yellow;
+    height: 40px;
+    /* vertical-align: text-top; */
+    vertical-align: middle;
 }
 
 /*
@@ -132,7 +163,8 @@ td, th {
     2. Függőlegesen felülre igazodjon a szöveg.
 */
 th {
-
+    height: 30px;  
+    vertical-align: top;
 }
 
 /*
@@ -140,19 +172,22 @@ th {
     1. A felirat alsó margója 10px.
 */
 
+caption {
+    margin-bottom: 10px;
+}
 
 /*
     Az utolsó sor celláira mutatva a kurzor legyen célkereszt (crosshair).
 */
 tr:last-of-type {
-
+    cursor: crosshair;
 }
 
 /*
     A Star Wars cikk háttere legyen piros-kék-zöld lineáris színátmenet.
 */
 article {
-
+    background-image: linear-gradient(red, blue, green);
 }
 
 article p {
@@ -166,5 +201,5 @@ article p {
     Az napról szóló cikk háttere legyen narancs-fekete lineáris színátmenet a bal felső sarokból a jobb alsó felé. (0deg = 0fok = felfelé irány)
 */
 article:last-of-type {
-
+    background-image: linear-gradient(135deg, orange, black);
 }
